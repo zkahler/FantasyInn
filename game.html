@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Ace Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url(images/table.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="text-overlay">Fancy a game? Rules are simple. I deal four, and you pick one. Flip the Ace and win!</div>
+    <div class="container">
+        <div id="ace-card-grid" class="ace-card-grid"></div>
+        <div class="controls">
+            <button id="shuffleGame-btn">Deal Cards</button>
+            <button id="leaveGame-btn">Leave Table</button>
+        </div>
+        <p id="message" style="display: none; background-color: rgba(0, 0, 0, 0.3); font-size: 20px; color: white;"></p>
+    </div>
+    <script src="gameScript.js"></script>
+</body>
+</html>

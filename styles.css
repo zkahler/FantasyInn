@@ -1,0 +1,262 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.top-image {
+    width: 100%;
+    max-width: 800px; 
+    height: auto;
+    margin-bottom: 20px; 
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3); /* Optional: for better readability */
+}
+
+.card-stack {
+    position: relative;
+    width: 375px; 
+    height: 600px; 
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+/* specific button styles, mostly added for color */
+/* index.html */
+#enterInn-btn {
+    background-color: green;
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+}
+
+/* inside.html */
+#fortune-btn {
+    background-color: purple;
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+}
+
+#leaveInn-btn {
+    background-color: darkred;
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+}
+
+#game-btn {
+    background-color: blue;
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+}
+
+/* fortune.html */
+#shuffle-btn {
+    background-color: purple;
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+}
+
+#reset-btn {
+    background-color: purple;
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+}
+
+#leaveFortune-btn {
+    background-color: darkred;
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+}
+
+/* game.html */
+#shuffleGame-btn {
+    background-color: blue;
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+}
+
+#leaveGame-btn {
+    background-color: darkred;
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+}
+
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid black;
+    transform-origin: bottom right; 
+}
+
+.card-back img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-back, .card {
+    transition: transform 0.5s ease;
+}
+
+
+
+
+
+/* card rotation */
+.card-back:nth-child(1) { transform: rotate(0deg); }
+.card-back:nth-child(2) { transform: rotate(1deg); }
+.card-back:nth-child(3) { transform: rotate(2deg); }
+.card-back:nth-child(4) { transform: rotate(3deg); }
+.card-back:nth-child(5) { transform: rotate(4deg); }
+.card-back:nth-child(6) { transform: rotate(5deg); }
+.card-back:nth-child(7) { transform: rotate(6deg); }
+.card-back:nth-child(8) { transform: rotate(7deg); }
+.card-back:nth-child(9) { transform: rotate(8deg); }
+.card-back:nth-child(10) { transform: rotate(9deg); }
+.card-back:nth-child(11) { transform: rotate(10deg); }
+.card-back:nth-child(12) { transform: rotate(11deg); }
+.card-back:nth-child(13) { transform: rotate(12deg); }
+.card-back:nth-child(14) { transform: rotate(13deg); }
+.card-back:nth-child(15) { transform: rotate(14deg); }
+.card-back:nth-child(16) { transform: rotate(15deg); }
+.card-back:nth-child(17) { transform: rotate(16deg); }
+.card-back:nth-child(18) { transform: rotate(17deg); }
+.card-back:nth-child(19) { transform: rotate(18deg); }
+.card-back:nth-child(20) { transform: rotate(19deg); }
+.card-back:nth-child(21) { transform: rotate(20deg); }
+.card-back:nth-child(22) { transform: rotate(21deg); }
+
+.card {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid black;
+    transform-origin: bottom right; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes shuffle {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(20px, -20px) rotate(10deg);
+    }
+    50% {
+        transform: translate(-20px, -20px) rotate(-10deg);
+    }
+    75% {
+        transform: translate(20px, 20px) rotate(10deg);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.shuffling {
+    animation: shuffle 0.5s ease-in-out infinite;
+}
+
+
+/* game styles */
+
+.ace-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.ace-card-back, .ace-card-face {
+    width: 150px; 
+    height: 225px; 
+    cursor: pointer; 
+    animation: tossAnimation 1s ease-out;
+    animation-delay: var(--animation-delay); 
+}
+
+.ace-card-back img, .ace-card-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    cursor: pointer; 
+    
+}
+
+/* keyframes for toss animation */
+@keyframes tossAnimation {
+    from {
+        transform: translateY(-200px) rotate(-360deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
