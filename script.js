@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Exit inn
     document.getElementById('leaveInn-btn').addEventListener('click', function() {
-        window.location.href = 'outside.html';
+        window.location.href = 'index.html';
     });
 
     // Sit at fortune table
