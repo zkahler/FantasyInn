@@ -63,8 +63,8 @@ body {
 
 @media (max-width: 768px) {
     .card-stack {
-        width: 275px;
-        height: 500px;
+        width: 75%;
+        height: auto;
         
     }
 }
