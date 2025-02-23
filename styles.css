@@ -46,7 +46,7 @@ body {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .text-overlay {
-        font-size: 1em; 
+        font-size: .5em; 
         top: 5%; 
         left: 5%; 
         width: 90%; 
