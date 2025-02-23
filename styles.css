@@ -207,11 +207,7 @@ button:hover {
 .card-back:nth-child(21) { transform: rotate(20deg); }
 .card-back:nth-child(22) { transform: rotate(21deg); }
 
-@media (max-width: 768px) {
-    .card-back {
-        transform: rotate(0deg) !important;
-    }
-}
+
 
 .card {
     width: 100%;
