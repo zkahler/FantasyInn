@@ -20,18 +20,39 @@ body {
     margin-bottom: 20px; 
 }
 
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .images img {
+        max-width: 45%; 
+    }
+}
+
+
+/* Ensure the text overlay is responsive */
 .text-overlay {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 24px;
-    font-family: Arial, sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    top: 10%; 
+    left: 10%; 
+    width: 80%; 
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.3); /* Optional: for better readability */
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white; 
+    font-size: 1.2em; 
+    text-align: center;
+    box-sizing: border-box; 
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .text-overlay {
+        font-size: 1em; 
+        top: 5%; 
+        left: 5%; 
+        width: 90%; 
+    }
+}
+
 
 .card-stack {
     position: relative;
