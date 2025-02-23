@@ -46,7 +46,7 @@ body {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .text-overlay {
-        font-size: .5em; 
+        font-size: 50%; 
         top: 5%; 
         left: 5%; 
         width: 90%; 
@@ -207,6 +207,12 @@ button:hover {
 .card-back:nth-child(21) { transform: rotate(20deg); }
 .card-back:nth-child(22) { transform: rotate(21deg); }
 
+@media (max-width: 768px) {
+    .card-back {
+        transform: rotate(0deg) !important;
+    }
+}
+
 .card {
     width: 100%;
     height: 100%;
@@ -217,6 +223,7 @@ button:hover {
     top: 0;
     left: 0;
 }
+
 
 .card img {
     width: 100%;
