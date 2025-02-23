@@ -1,8 +1,8 @@
 const aceCardImages = [
-    'images/jack.png',
+    'images/jack.png', //card images found at pngimg.com "PNG images and cliparts for web design"
     'images/queen.png',
     'images/king.png',
-    'images/ace.png'    // ace card
+    'images/ace.png'    
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -35,7 +35,7 @@ function shuffleAndDealAceCards() {
         cardElement.innerHTML = `<img src="images/cardback.png" alt="Card Back">`;
 
         
-        cardElement.style.setProperty('--animation-delay', `${index * 0.2}s`);
+        cardElement.style.setProperty('--animation-delay', `${index * 0.2}s`); //tossing animation
 
         cardElement.addEventListener('click', function() {
             flipAceCard(cardElement, cardImage);
@@ -59,19 +59,19 @@ function flipAceCard(cardElement, cardImage) {
         message.textContent = "Aye! You found the Ace... double or nothing?";
         message.style.display = 'block';
     }
-
+    // display the message if the jack card is found
     if (cardImage.includes('jack.png')) {
         const message = document.getElementById('message');
         message.textContent = "Ha! Looks like your gold's mine, Stranger!";
         message.style.display = 'block';
     }
-
+    // display the message if the queen card is found
     if (cardImage.includes('queen.png')) {
         const message = document.getElementById('message');
         message.textContent = "Oh, my sweet Penelope! *ahem* You lost, Stranger. Shall we play again?";
         message.style.display = 'block';
     }
-
+    // display the message if the king card is found
     if (cardImage.includes('king.png')) {
         const message = document.getElementById('message');
         message.textContent = "All Hail the King! Looks like taxes are due, Kid!";

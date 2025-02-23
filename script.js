@@ -1,5 +1,5 @@
 const deck = [
-    { image: 'images/Balance Card.png' },
+    { image: 'images/Balance Card.png' }, //all images provided for free from tumblr user dm-paul-weber
     { image: 'images/Comet Card.png' },
     { image: 'images/Donjon Card.png' },
     { image: 'images/Euryale.png' },
@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
-
 
 
 //inside
@@ -114,7 +113,7 @@ function displayDeck() {
     
     currentDeck.forEach((card, index) => {
         const cardElement = document.createElement('div');
-        cardElement.className = 'card-back';
+        cardElement.className = 'card-back'; //ai generated image of a dnd card back
         cardElement.innerHTML = `<img src="images/cardback.png" alt="Card Back">`;
         cardElement.style.transform = `rotate(${index}deg)`; //card rotation
         
